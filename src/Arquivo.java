@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.ArrayList;
 
 public class Arquivo {
   private static String caminhoModelos;
@@ -16,22 +17,22 @@ public class Arquivo {
 
 	}
 
-	public Problema[] carregarProblemas() {
+	public ArrayList<Problema> carregarProblemas() {
 		return null;
 	}
 
-	public ModeloCicloVida[] carregarModelos() throws IOException{
+	public ArrayList<ModeloCicloVida> carregarModelos() throws IOException{
     BufferedReader br = null;
     String linha = "";
     br = new BufferedReader(new FileReader(caminhoModelos));
     br.readLine();
+    ArrayList<ModeloCicloVida> m_list = new ArrayList<ModeloCicloVida>();
     while ((linha = br.readLine()) != null) {
         String[] entrada= linha.split(csvDivisor);
         ModeloCicloVida mod = new ModeloCicloVida(entrada[0], entrada[1]);
-        mod.printaNome();
-        mod.exibirDescricao();
+        m_list.add(mod);    
     }
-		return null;
+    return m_list;
 	}
 
 	public Atividade[] carregarAtividades() {

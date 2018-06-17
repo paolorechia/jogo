@@ -7,11 +7,11 @@ public class mainProgram{
       screen.display();
       String input = UserInterface.getUserInput();
       System.out.println(input);
-      if (input.equals("cadastrar")){
+      if (input.toUpperCase().equals("CADASTRAR")){
         CadastroProblema cp = new CadastroProblema();
         cp.cadastrarProblema();
       }
-      else if(input.equals("selecionar")){
+      else if(input.toUpperCase().equals("SELECIONAR")){
         SelecionarProblema sp = new SelecionarProblema();
         Jogo jogo = sp.selecionarProblema();
         if (jogo != null){
@@ -19,7 +19,7 @@ public class mainProgram{
         }
         else input = "";
       }
-      else if (input.equals("sair")){
+      else if (input.toUpperCase().equals("SAIR")){
         return;
       }
     }

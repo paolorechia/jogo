@@ -1,3 +1,4 @@
+
 public class ModeloCicloVida {
 
   private String nome;
@@ -9,7 +10,10 @@ public class ModeloCicloVida {
   public String getNome(){
     return nome;
   }
-  public void printaNome(){
+  public String getDesc(){
+    return desc;
+  }
+  public void exibirNome(){
     System.out.println(nome);
   }
 	public void exibirDescricao() {
