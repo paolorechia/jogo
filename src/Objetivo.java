@@ -10,16 +10,16 @@ public class Objetivo {
 	public void setaNome(String nome) {
     this.nome = nome;
 	}
-  public void getNome(){
+  public String getNome(){
     return nome;
   }
 	public void setaCusto(int analise, int proj, int bd, int prog, int teste) {
     this.custo = new Custo(analise, proj, bd, prog, teste);
 	}
-  public void getCusto(){
+  public Custo getCusto(){
     return custo;
   }
-  public void terminou(){
+  public boolean terminou(){
     if (estadoConclusao < 100){
       return false;
     }

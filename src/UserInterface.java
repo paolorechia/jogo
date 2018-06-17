@@ -6,12 +6,10 @@ public class UserInterface {
   private static String s;
   private static int num;
 	public static String getUserInput() throws IOException {
-    System.out.print("Digite a opcao desejada: ");
     s = in.readLine();
 		return String.format(s);
   }
   public static int getNumeric() throws IOException {
-    System.out.print("Digite a opcao desejada: ");
     boolean sucesso = false;
     while (!sucesso){
       try {

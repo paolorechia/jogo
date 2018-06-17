@@ -1,4 +1,6 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class EscolherModelo{
   public ArrayList<ModeloCicloVida> escolherModelo(

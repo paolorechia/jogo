@@ -10,7 +10,12 @@ public class Custo {
     this.analise = analise;
     this.projeto = proj;
     this.BD = bd;
-    this.progamacao = prog;
+    this.programacao = prog;
     this.teste = teste;
+  }
+  public String getString(){
+    return String.format(
+      "analise: %d\nprojeto: %d\nBD: %d\nprogramacao: %d\nteste: %d\n",
+      analise, projeto, BD, programacao, teste);
   }
 }

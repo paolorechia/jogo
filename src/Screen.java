@@ -5,6 +5,7 @@ public class Screen{
   private String title;
   private LinkedHashMap<String, String> opcoes;
   private ArrayList<String> mensagens;
+  private String prompt;
   private int screenLength;
   private int maxOpSize;
   public Screen(){
@@ -13,6 +14,7 @@ public class Screen{
     screenLength = 80;
     maxOpSize = 20;
     title = "Teste";
+    prompt = "Digite uma opcao:";
   }
   public void setOp(String nomeOp, String descOp){
     opcoes.put(nomeOp, descOp);
@@ -20,8 +22,18 @@ public class Screen{
   public void setTitulo(String titulo){
     title = titulo;
   }
+  public void setPrompt(String prompt){
+    title = prompt;
+  }
+  public String getPrompt(){
+    return prompt;
+  }
+  
   public void zeraMsg(){
     this.mensagens = new ArrayList<String>();
+  }
+  public void addMsg(String s){
+    this.mensagens.add(s); 
   }
   public void display(){
     System.out.print("\033\143");
@@ -36,6 +48,7 @@ public class Screen{
 //      System.out.println(op.getKey() + ": " + op.getValue());
       printOption(op.getKey(), op.getValue());
     }
+    printPrompt();
   }
   private void printSeparator(){
     for (int i = 0; i < screenLength; i++){
@@ -64,5 +77,8 @@ public class Screen{
   }
   private void printMsg(String msg){
     System.out.println(msg);
+  }
+  private void printPrompt(){
+    System.out.print(prompt);
   }
 }

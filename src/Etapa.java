@@ -1,3 +1,6 @@
+import java.io.*;
+import java.util.ArrayList;
+
 public class Etapa {
 
 	private String Nome;
@@ -11,6 +14,7 @@ public class Etapa {
 	private int duracaoReal;
 
 	public void adicionarObj(Objetivo obj) {
+    objetivos.add(obj);
 
 	}
 
