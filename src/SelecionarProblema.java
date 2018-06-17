@@ -9,10 +9,8 @@ public class SelecionarProblema {
     scr.setOp("","");
     scr.setOp("abortar", "retorna ao menu principal");
     String input;
-    input = "Wth";
     while (true){
       scr.display();
-      System.out.println(input);
       input = UserInterface.getUserInput();
       if (input.equals("abortar")){
         return null;
