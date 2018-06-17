@@ -17,6 +17,8 @@ public class CriarObjetivo{
         return null;
       }
       else if (input.toUpperCase().equals("F"){
+        scr.setTitulo("Criar Objetivo - passo 1");
+        scr.display();
         System.out.println("Forneca o nome: ");
         nome = UserInterface.getUserInput();
         System.out.print("Custo analise: "); 
