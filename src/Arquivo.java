@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.EOFException;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Iterator;
@@ -20,8 +21,11 @@ public class Arquivo {
     caminhoProblemas = "problemas.txt";
     csvDivisor = ",";
   }
-	public void salvar(Problema[] p) throws IOException,
+	public void salvar(ArrayList<Problema> p_list) throws IOException,
                                    ClassNotFoundException{
+    FileOutputStream fos = new FileOutputStream(caminhoProblemas);
+    ObjectOutputStream oos = new ObjectOutputStream(fos);
+    oos.writeObject(p_list);
 	}
 
 	public ArrayList<Problema> carregarProblemas() throws IOException,
