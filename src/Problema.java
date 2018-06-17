@@ -5,7 +5,7 @@ public class Problema implements Serializable{
   private static final long serialVersionUID = 1L;
 	private String DescricaoProblema;
 
-	private Objetivo objetivos;
+	private ArrayList<Objetivo> objetivos;
 
 	private ModeloCicloVida modelosDisponiveis;
 
@@ -22,7 +22,6 @@ public class Problema implements Serializable{
 	public void setaDescricao(int String) {
 
 	}
-
 	public void setaObjetivos() {
 
 	}
