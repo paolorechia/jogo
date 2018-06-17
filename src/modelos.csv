@@ -1,6 +1,6 @@
 #nome, descricao
-"Cascata","Sequencia linear, fases bem definidas"
-"Forma V","Semelhante ao Cascata, mas com testes antecipados"
-"Incremental", "Varias cascatas, construidas incrementalmente"
-"Prototipagem", "Baseado em sucessivos prototipos"
-"Espiral", Combinacao de Cascata com Prototipagem"
+Cascata,Sequencia linear, fases bem definidas
+Forma V,Semelhante ao Cascata, mas com testes antecipados
+Incremental,Varias cascatas, construidas incrementalmente
+Prototipagem,Baseado em sucessivos prototipos
+Espiral,Combinacao de Cascata com Prototipagem

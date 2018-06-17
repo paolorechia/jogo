@@ -24,10 +24,12 @@ public class Arquivo {
     BufferedReader br = null;
     String linha = "";
     br = new BufferedReader(new FileReader(caminhoModelos));
+    br.readLine();
     while ((linha = br.readLine()) != null) {
         String[] entrada= linha.split(csvDivisor);
-        System.out.println("Nome modelo = " + entrada[0]);
-        System.out.println("Desc modelo = " + entrada[1]);
+        ModeloCicloVida mod = new ModeloCicloVida(entrada[0], entrada[1]);
+        mod.printaNome();
+        mod.exibirDescricao();
     }
 		return null;
 	}
