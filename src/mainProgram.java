@@ -2,7 +2,7 @@ import java.io.*;
 
 public class mainProgram{
   public static void main(String[] args) throws IOException{
-    Screen screen = new Screen();
+    Screen screen = new MainScreen();
     while(true){
       screen.display();
       String input = UserInterface.getUserInput();
