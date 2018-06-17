@@ -6,7 +6,7 @@ public class Desenvolvedor {
 
 	private int idade;
 
-	private string nome;
+	private String nome;
 
 	private Computador hw;
 

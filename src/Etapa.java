@@ -1,6 +1,6 @@
 public class Etapa {
 
-	private string Nome;
+	private String Nome;
 
 	private int Ordem;
 
