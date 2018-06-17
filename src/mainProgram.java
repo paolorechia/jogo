@@ -13,7 +13,11 @@ public class mainProgram{
       }
       else if(input.equals("selecionar")){
         SelecionarProblema sp = new SelecionarProblema();
-        sp.selecionarProblema();
+        Jogo jogo = sp.selecionarProblema();
+        if (jogo != null){
+          jogo.iniciar();
+        }
+        else input = "";
       }
       else if (input.equals("sair")){
         return;

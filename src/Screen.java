@@ -2,10 +2,10 @@ import java.io.*;
 import java.util.*;
 
 public class Screen{
-  static private String title;
-  static private LinkedHashMap<String, String> opcoes;
-  static private int screenLength;
-  static private int maxOpSize;
+  private String title;
+  private LinkedHashMap<String, String> opcoes;
+  private int screenLength;
+  private int maxOpSize;
   public Screen(){
     opcoes = new LinkedHashMap<String, String>();
     screenLength = 80;
