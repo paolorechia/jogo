@@ -19,8 +19,8 @@ public class EscolherModelo{
       if (input.toUpperCase().equals("ABORTAR")){
         return null;
       }
-      else if (input.toUpperCase().equals("PROX"){
-        if (iter.hasNext(){
+      else if (input.toUpperCase().equals("PROX")){
+        if (iter.hasNext()){
           mod = iter.next();
         }
         else{
@@ -28,11 +28,11 @@ public class EscolherModelo{
           mod = iter.next();
         }
       }
-      else if (input.toUpperCase().equals("INCLUIR"){
+      else if (input.toUpperCase().equals("INCLUIR")){
         // implementar Set data structure de modelos
   
       }  
-      else if (input.toUpperCase().equals("TERMINA"){
+      else if (input.toUpperCase().equals("TERMINA")){
         // implementar Set data structure de modelos
         // if Set.size > 0 {
 //          return Set

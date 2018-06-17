@@ -4,7 +4,7 @@ public class Etapa {
 
 	private int Ordem;
 
-	private Objetivo objetivos;
+	private ArrayList<Objetivo> objetivos;
 
 	private int duracaoEsperada;
 

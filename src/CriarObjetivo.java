@@ -9,14 +9,18 @@ public class CriarObjetivo{
     scr.setOp("f","fornecer nome do objetivo");
     String input;
     String nome;
-    int analise, proj, bd prog, teste;
+    int analise; 
+    int proj;
+    int bd;
+    int prog;
+    int teste;
     while (true){
       scr.display();
       input = UserInterface.getUserInput();
       if (input.toUpperCase().equals("ABORTAR")){
         return null;
       }
-      else if (input.toUpperCase().equals("F"){
+      else if (input.toUpperCase().equals("F")){
         scr.setTitulo("Criar Objetivo - passo 1");
         scr.display();
         System.out.println("Forneca o nome: ");

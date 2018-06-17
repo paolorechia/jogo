@@ -4,10 +4,12 @@ import java.util.*;
 public class Screen{
   private String title;
   private LinkedHashMap<String, String> opcoes;
+  private ArrayList<String> mensagens;
   private int screenLength;
   private int maxOpSize;
   public Screen(){
     opcoes = new LinkedHashMap<String, String>();
+    this.mensagens = new ArrayList<String>();
     screenLength = 80;
     maxOpSize = 20;
     title = "Teste";
@@ -18,12 +20,17 @@ public class Screen{
   public void setTitulo(String titulo){
     title = titulo;
   }
+  public void zeraMsg(){
+    this.mensagens = new ArrayList<String>();
+  }
   public void display(){
     System.out.print("\033\143");
     printSeparator();
     printTitle();
     printSeparator();
-    System.out.println("Por favor, escolha alguma das opcoes abaixo:");
+    for (String s: mensagens){
+      printMsg(s);
+    }
     printSeparator();
     for (Map.Entry<String, String> op: opcoes.entrySet()){
 //      System.out.println(op.getKey() + ": " + op.getValue());
@@ -54,5 +61,8 @@ public class Screen{
       System.out.print(" ");
     }
     System.out.println(desc);
+  }
+  private void printMsg(String msg){
+    System.out.println(msg);
   }
 }
