@@ -25,7 +25,7 @@ public class Etapa {
 	}
 
 	public void definirDuracaoEsperada(int dur) {
-
+    this.duracaoEsperada = dur;
 	}
 
 	public void incDurReal() {

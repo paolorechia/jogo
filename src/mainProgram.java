@@ -1,4 +1,6 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class mainProgram{
   public static void main(String[] args) throws IOException,
@@ -14,9 +16,14 @@ public class mainProgram{
       }
       else if(input.toUpperCase().equals("SELECIONAR")){
         SelecionarProblema sp = new SelecionarProblema();
-        Jogo jogo = sp.selecionarProblema();
-        if (jogo != null){
-          jogo.iniciar();
+        Problema p = sp.selecionarProblema();
+        if (p != null){
+          Projeto proj = new CriarProjeto().criarProjeto(p);
+          if (proj != null){
+            IniciarJogo ij = new IniciarJogo();
+            ij.iniciarJogo(p, proj);
+            return;
+          }
         }
         else input = "";
       }
