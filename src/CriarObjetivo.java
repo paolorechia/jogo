@@ -1,12 +1,9 @@
 import java.io.*;
 
 public class CriarObjetivo{
-  public Objetivo criarObjetivo() throws IOException{
+  public static Objetivo criarObjetivo() throws IOException{
     Screen scr = new Screen(); 
     Objetivo o = null; 
-    scr.setTitulo("Criar Objetivo - passo 0");
-    scr.setOp("abortar", "retorna ao menu principal");
-    scr.setOp("f","fornecer nome do objetivo");
     String input;
     String nome;
     int analise; 
@@ -15,6 +12,9 @@ public class CriarObjetivo{
     int prog;
     int teste;
     while (true){
+      scr.setTitulo("Criar Objetivo - passo 0");
+      scr.setOp("abortar", "retorna ao menu principal");
+      scr.setOp("f","fornecer nome do objetivo");
       scr.display();
       input = UserInterface.getUserInput();
       if (input.toUpperCase().equals("ABORTAR")){
@@ -22,8 +22,9 @@ public class CriarObjetivo{
       }
       else if (input.toUpperCase().equals("F")){
         scr.setTitulo("Criar Objetivo - passo 1");
+        scr.zeraOp();
+        scr.setPrompt("Forneca o nome: ");
         scr.display();
-        System.out.println("Forneca o nome: ");
         nome = UserInterface.getUserInput();
         System.out.print("Custo analise: "); 
         analise = UserInterface.getNumeric();

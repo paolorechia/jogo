@@ -1,7 +1,8 @@
 import java.io.*;
 
 public class mainProgram{
-  public static void main(String[] args) throws IOException{
+  public static void main(String[] args) throws IOException,
+                                         ClassNotFoundException{
     Screen screen = new MainScreen();
     while(true){
       screen.display();

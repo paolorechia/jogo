@@ -23,10 +23,13 @@ public class Screen{
     title = titulo;
   }
   public void setPrompt(String prompt){
-    title = prompt;
+    this.prompt = prompt;
   }
   public String getPrompt(){
     return prompt;
+  }
+  public void zeraOp(){
+    opcoes = new LinkedHashMap<String, String>();
   }
   
   public void zeraMsg(){

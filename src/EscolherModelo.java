@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class EscolherModelo{
-  public ArrayList<ModeloCicloVida> escolherModelo(
+  public static ArrayList<ModeloCicloVida> escolherModelo(
                          ArrayList<ModeloCicloVida> m_list)
                          throws IOException{
     Screen scr = new Screen(); 

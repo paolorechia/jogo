@@ -10,5 +10,12 @@ public class testeArquivo{
       System.out.printf("%s: %s\n", mod.getNome(), mod.getDesc());
     }
     ArrayList<Problema> p_list = a.carregarProblemas();
+    if (p_list == null){
+      p_list = new ArrayList<Problema>();
+    }
+    Problema p = new Problema();
+    p.setaDescricao("Problema teste");
+    p.setaObjetivos();
+    p.escolheModelos();
   }
 }
