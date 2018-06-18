@@ -10,10 +10,15 @@ public class Problema implements Serializable{
 	private int numero_etapas;
 	private Objetivo[] etapas;
 
-  public Problema(){
+  public Problema(ArrayList<ModeloCicloVida> m_list){
     objetivos = new ArrayList<Objetivo>();
-
+    modelosDisponiveis = m_list;
   }
+	public ArrayList<ModeloCicloVida> getModelos() {
+    return modelosDisponiveis;
+	}
+
+  
 	public void exibirDescricao() {
 
 	}
@@ -52,7 +57,11 @@ public class Problema implements Serializable{
 	}
 
 	public void escolheModelos() throws IOException{
-    EscolherModelo.escolherModelo(modelosDisponiveis);
+    ArrayList<ModeloCicloVida> escolhidos;
+    escolhidos = EscolherModelo.escolherModelo(modelosDisponiveis);
+    if (escolhidos != null){
+      modelosDisponiveis = escolhidos;
+    }
 	}
 
 	public Objetivo criarListaObjetivos() {
