@@ -1,10 +1,10 @@
 import java.io.FileNotFoundException;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.EOFException;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.util.Iterator;
 import java.util.ArrayList;
 import java.lang.*;
@@ -19,14 +19,44 @@ public class Arquivo {
     caminhoModelos = "modelos.csv";
     caminhoProblemas = "problemas.txt";
   }
-/*
 	public void salvar(ArrayList<Problema> p_list) throws IOException,
                                    ClassNotFoundException{
-    FileOutputStream fos = new FileOutputStream(caminhoProblemas);
-    ObjectOutputStream oos = new ObjectOutputStream(fos);
-    oos.writeObject(p_list);
+    int i = 0;
+    String outputTest = "durp.txt";
+    BufferedWriter bw = new BufferedWriter(new FileWriter(outputTest));
+    for (Problema p : p_list){
+      bw.write(p.getDescricao());
+      System.out.println(p.getDescricao());
+      bw.newLine();
+      bw.write(i);
+      System.out.println(i);
+      bw.newLine();
+      i++;
+      bw.write(p.getEtapas().size());
+      System.out.println(p.getEtapas().size());
+      bw.newLine();
+      for (Etapa e: p.getEtapas()){
+        bw.write(e.getNome());
+        bw.newLine();
+        bw.write(e.getObjs().size());
+        bw.newLine();
+        for (Objetivo o: e.getObjs()){
+          bw.write(o.getNome());
+          bw.newLine();
+          ArrayList<Integer> custos;
+          custos = o.getCusto().asArrayList();
+          Iterator<Integer> iter = custos.iterator();
+          while(iter.hasNext()){
+            int c = iter.next();
+            bw.write(c);
+            bw.newLine();
+          }
+        }
+      }
+    }
+    bw.flush();
+    bw.close();
 	}
-*/
 
 	public ArrayList<Problema> carregarProblemas() 
                                                  throws IOException,
@@ -90,6 +120,7 @@ public class Arquivo {
         ModeloCicloVida mod = new ModeloCicloVida(entrada[0], entrada[1]);
         m_list.add(mod);    
     }
+    br.close();
     return m_list;
 	}
 

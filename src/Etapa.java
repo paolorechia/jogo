@@ -20,6 +20,9 @@ public class Etapa {
 	public void adicionarObj(Objetivo obj) {
     objetivos.add(obj);
 	}
+	public ArrayList<Objetivo> getObjs() {
+    return objetivos;
+	}
 
 	public void definirDuracaoEsperada(int dur) {
 
@@ -28,5 +31,7 @@ public class Etapa {
 	public void incDurReal() {
 
 	}
-
+  public String getNome(){
+    return nome;
+  }
 }
