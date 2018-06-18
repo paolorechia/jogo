@@ -9,6 +9,9 @@ public class testeArquivo{
     if (p_list == null){
       p_list = new ArrayList<Problema>();
     }
+    for (Problema p : p_list){
+      p.exibirDescricao(); 
+    }
     ArrayList<ModeloCicloVida> m_list = a.carregarModelos();
     Problema p = new Problema(m_list);
     p.setaDescricao("Problema teste");
@@ -20,6 +23,7 @@ public class testeArquivo{
     for (ModeloCicloVida mod: p.getModelos()){
       System.out.printf("%s: %s\n", mod.getNome(), mod.getDesc());
     }
-    
+    p_list.add(p);
+//    a.salvar(p_list);
   }
 }

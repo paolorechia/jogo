@@ -8,7 +8,7 @@ public class Problema implements Serializable{
 	private ArrayList<ModeloCicloVida> modelosDisponiveis;
 	private Cliente cliente;
 	private int numero_etapas;
-	private Objetivo[] etapas;
+	private ArrayList<Etapa> etapas;
 
   public Problema(ArrayList<ModeloCicloVida> m_list){
     objetivos = new ArrayList<Objetivo>();
@@ -20,7 +20,7 @@ public class Problema implements Serializable{
 
   
 	public void exibirDescricao() {
-
+    System.out.println(descricaoProblema);
 	}
 
 	public void setaDescricao(String desc) {
@@ -63,6 +63,12 @@ public class Problema implements Serializable{
       modelosDisponiveis = escolhidos;
     }
 	}
+  public void setEtapas(ArrayList<Etapa> etapas){
+    this.etapas = etapas;
+  }
+  public void adicionarEtapa(Etapa e){
+    etapas.add(e);
+  }
 
 	public Objetivo criarListaObjetivos() {
 		return null;
