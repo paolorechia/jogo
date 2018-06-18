@@ -8,11 +8,13 @@ public class Screen{
   private String prompt;
   private int screenLength;
   private int maxOpSize;
+  private int maxLines;
   public Screen(){
     opcoes = new LinkedHashMap<String, String>();
     this.mensagens = new ArrayList<String>();
     screenLength = 80;
     maxOpSize = 20;
+    maxLines = 20;
     title = "Teste";
     prompt = "Digite uma opcao:";
   }
@@ -40,16 +42,29 @@ public class Screen{
   }
   public void display(){
     System.out.print("\033\143");
+    int lineCounter = 0;
     printSeparator();
+    lineCounter++;
     printTitle();
+    lineCounter++;
     printSeparator();
+    lineCounter++;
     for (String s: mensagens){
       printMsg(s);
+      lineCounter++;
     }
     printSeparator();
+    lineCounter++;
     for (Map.Entry<String, String> op: opcoes.entrySet()){
 //      System.out.println(op.getKey() + ": " + op.getValue());
       printOption(op.getKey(), op.getValue());
+      lineCounter++;
+    }
+    lineCounter++;
+    int emptyLines = this.maxLines - lineCounter;
+    while (emptyLines > 0){
+      System.out.println();
+      emptyLines--; 
     }
     printPrompt();
   }
