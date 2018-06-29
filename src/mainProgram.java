@@ -1,3 +1,12 @@
+/*
+ * UFPR - DINF
+ * Trabalho pratico Projeto de Software - parte 3
+ * Prof. Andrey
+ * Alunos:  Luiz Gustavo Jhon Rodrigues - GRR 20153723
+ *          Fabio Cervi de Mello        - GRR 20151067
+ *          Paolo Andreas Stall Rechia  - GRR 20135196
+ */
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
